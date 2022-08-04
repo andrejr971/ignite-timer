@@ -28,7 +28,7 @@ export function History() {
                   {cycle.minutesAmount.toString().padStart(2, '0')} minutos
                 </td>
                 <td>
-                  {formatDistanceToNow(cycle.startDate, {
+                  {formatDistanceToNow(new Date(cycle.startDate), {
                     addSuffix: true,
                     locale: ptBR,
                   })}
@@ -37,10 +37,10 @@ export function History() {
                   {cycle.finishedDate && (
                     <Status statusColor="green">Concluído</Status>
                   )}
-                  {cycle.interruptDate && (
+                  {cycle.interruptedDate && (
                     <Status statusColor="red">Interrompido</Status>
                   )}
-                  {!cycle.interruptDate && !cycle.finishedDate && (
+                  {!cycle.interruptedDate && !cycle.finishedDate && (
                     <Status statusColor="yellow">Em andamento</Status>
                   )}
                 </td>

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { CycleContext } from '../contexts/CycleContext'
+import { CyclesContext } from '../contexts/CycleContext'
 
 export function useCycle() {
-  const context = useContext(CycleContext)
+  const context = useContext(CyclesContext)
   return context
 }

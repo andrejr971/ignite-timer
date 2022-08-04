@@ -13,8 +13,8 @@ export function NewCycleForm() {
         id="task"
         list="task-suggestions"
         placeholder="Dê um nome para o seu projeto"
-        {...register('task')}
         disabled={!!activeCycle}
+        {...register('task')}
       />
 
       <datalist id="task-suggestions">
